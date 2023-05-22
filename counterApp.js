@@ -19,8 +19,16 @@ const onCounterChange = (e) => {
 
 counter.addEventListener("click", onCounterChange);
 
+// link tabs to save data
 const onStorageChange = (e) => {
   counterValue.textContent = e.newValue;
 };
 
 window.addEventListener("storage", onStorageChange);
+
+// saving data when opening a tab
+const onContentLoad = () => {
+  counterValue.textContent = localStorage.getItem("counter") || 0;
+};
+
+document.addEventListener("DOMContentLoaded", onContentLoad);
