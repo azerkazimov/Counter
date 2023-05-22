@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Counter</title>
+  </head>
+  <body>
+    <style>
+      body {
+        background-color: rgb(236, 230, 169);
+      }
+      .counter {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100px;
+        width: 20%;
+        margin: 0 auto;
+        border: 1px solid saddlebrown;
+        border-radius: 5px;
+      }
+      .counter_button {
+        width: 40px;
+        height: 40px;
+        border: 1px solid black;
+        border-radius: 5px;
+      }
+      .counter_value {
+        background-color: white;
+        height: 50px;
+        width: 50px;
+        font-size: 42px;
+        text-align: center;
+        margin: 0 10px;
+      }
+    </style>
+
+    <div class="counter">
+      <button class="counter_button" data-action="decrease">-</button>
+      <span class="counter_value">0</span>
+      <button class="counter_button" data-action="increase">+</button>
+    </div>
+
+    <script src="counterApp.js"></script>
+  </body>
+</html>
